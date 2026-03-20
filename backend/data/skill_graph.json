@@ -1,0 +1,334 @@
+{
+  "nodes": {
+    "programming_fundamentals": {
+      "id": "programming_fundamentals",
+      "name": "Programming Fundamentals",
+      "category": "programming",
+      "level": 0,
+      "description": "Logic, algorithms, variables, and the core conceptual building blocks of code.",
+      "prerequisites": ["computer_concepts"]
+    },
+    "computer_concepts": {
+      "id": "computer_concepts",
+      "name": "Basic Computer Concepts",
+      "category": "programming",
+      "level": 0,
+      "description": "How computers work, operating systems, hardware, and digital literacy basics.",
+      "prerequisites": []
+    },
+    "python": {
+      "id": "python",
+      "name": "Python Programming",
+      "category": "programming",
+      "level": 1,
+      "description": "Core Python programming including data types, control flow, OOP, and standard library usage.",
+      "prerequisites": ["programming_fundamentals"]
+    },
+    "sql": {
+      "id": "sql",
+      "name": "SQL & Databases",
+      "category": "data",
+      "level": 1,
+      "description": "Relational database design, SQL queries, joins, aggregations, and database management.",
+      "prerequisites": ["python"]
+    },
+    "statistics": {
+      "id": "statistics",
+      "name": "Statistics & Probability",
+      "category": "math",
+      "level": 1,
+      "description": "Descriptive and inferential statistics, probability distributions, hypothesis testing.",
+      "prerequisites": []
+    },
+    "linear_algebra": {
+      "id": "linear_algebra",
+      "name": "Linear Algebra",
+      "category": "math",
+      "level": 1,
+      "description": "Vectors, matrices, eigenvalues, matrix decomposition for ML foundations.",
+      "prerequisites": []
+    },
+    "git": {
+      "id": "git",
+      "name": "Git & Version Control",
+      "category": "devops",
+      "level": 1,
+      "description": "Version control with Git, branching strategies, collaboration workflows.",
+      "prerequisites": []
+    },
+    "html_css": {
+      "id": "html_css",
+      "name": "HTML & CSS",
+      "category": "frontend",
+      "level": 1,
+      "description": "Web fundamentals including HTML5 semantic markup and CSS3 styling.",
+      "prerequisites": ["computer_concepts"]
+    },
+    "javascript": {
+      "id": "javascript",
+      "name": "JavaScript",
+      "category": "frontend",
+      "level": 1,
+      "description": "Core JavaScript including ES6+, async/await, DOM manipulation.",
+      "prerequisites": ["html_css"]
+    },
+    "data_analysis": {
+      "id": "data_analysis",
+      "name": "Data Analysis with Pandas",
+      "category": "data",
+      "level": 2,
+      "description": "Data manipulation, cleaning, and analysis using Pandas and NumPy.",
+      "prerequisites": ["python", "statistics"]
+    },
+    "data_visualization": {
+      "id": "data_visualization",
+      "name": "Data Visualization",
+      "category": "data",
+      "level": 2,
+      "description": "Creating insightful visualizations with Matplotlib, Seaborn, and Plotly.",
+      "prerequisites": ["data_analysis"]
+    },
+    "machine_learning": {
+      "id": "machine_learning",
+      "name": "Machine Learning",
+      "category": "ai",
+      "level": 2,
+      "description": "Supervised and unsupervised learning algorithms, model selection, evaluation.",
+      "prerequisites": ["python", "statistics", "linear_algebra"]
+    },
+    "deep_learning": {
+      "id": "deep_learning",
+      "name": "Deep Learning",
+      "category": "ai",
+      "level": 3,
+      "description": "Neural networks, CNNs, RNNs, training techniques, and frameworks.",
+      "prerequisites": ["machine_learning", "linear_algebra"]
+    },
+    "nlp": {
+      "id": "nlp",
+      "name": "Natural Language Processing",
+      "category": "ai",
+      "level": 3,
+      "description": "Text processing, embeddings, transformers, and language model applications.",
+      "prerequisites": ["machine_learning", "deep_learning"]
+    },
+    "computer_vision": {
+      "id": "computer_vision",
+      "name": "Computer Vision",
+      "category": "ai",
+      "level": 3,
+      "description": "Image processing, object detection, segmentation, and visual recognition.",
+      "prerequisites": ["deep_learning"]
+    },
+    "react": {
+      "id": "react",
+      "name": "React.js",
+      "category": "frontend",
+      "level": 2,
+      "description": "Component-based UI development with React, hooks, state management.",
+      "prerequisites": ["javascript"]
+    },
+    "nodejs": {
+      "id": "nodejs",
+      "name": "Node.js",
+      "category": "backend",
+      "level": 2,
+      "description": "Server-side JavaScript, Express.js, REST APIs, middleware.",
+      "prerequisites": ["javascript"]
+    },
+    "typescript": {
+      "id": "typescript",
+      "name": "TypeScript",
+      "category": "frontend",
+      "level": 2,
+      "description": "Type-safe JavaScript development with interfaces, generics, and advanced types.",
+      "prerequisites": ["javascript"]
+    },
+    "fastapi": {
+      "id": "fastapi",
+      "name": "FastAPI",
+      "category": "backend",
+      "level": 2,
+      "description": "Building high-performance APIs with Python, async support, and auto-documentation.",
+      "prerequisites": ["python"]
+    },
+    "docker": {
+      "id": "docker",
+      "name": "Docker & Containers",
+      "category": "devops",
+      "level": 2,
+      "description": "Containerization, Docker images, multi-stage builds, and Docker Compose.",
+      "prerequisites": ["git"]
+    },
+    "kubernetes": {
+      "id": "kubernetes",
+      "name": "Kubernetes",
+      "category": "devops",
+      "level": 3,
+      "description": "Container orchestration, deployments, services, and cluster management.",
+      "prerequisites": ["docker"]
+    },
+    "ci_cd": {
+      "id": "ci_cd",
+      "name": "CI/CD Pipelines",
+      "category": "devops",
+      "level": 2,
+      "description": "Continuous integration and deployment using GitHub Actions, Jenkins, or similar.",
+      "prerequisites": ["git", "docker"]
+    },
+    "cloud_aws": {
+      "id": "cloud_aws",
+      "name": "Cloud Computing (AWS)",
+      "category": "devops",
+      "level": 2,
+      "description": "AWS services including EC2, S3, Lambda, RDS, and IAM.",
+      "prerequisites": ["docker"]
+    },
+    "mlops": {
+      "id": "mlops",
+      "name": "MLOps",
+      "category": "ai",
+      "level": 3,
+      "description": "ML model deployment, monitoring, versioning, and pipeline automation.",
+      "prerequisites": ["machine_learning", "docker", "ci_cd"]
+    },
+    "system_design": {
+      "id": "system_design",
+      "name": "System Design",
+      "category": "backend",
+      "level": 3,
+      "description": "Designing scalable distributed systems, microservices, caching, and load balancing.",
+      "prerequisites": ["fastapi", "sql", "docker"]
+    },
+    "graphql": {
+      "id": "graphql",
+      "name": "GraphQL",
+      "category": "backend",
+      "level": 2,
+      "description": "Query language for APIs, schema design, resolvers, and subscriptions.",
+      "prerequisites": ["nodejs"]
+    },
+    "redis": {
+      "id": "redis",
+      "name": "Redis & Caching",
+      "category": "backend",
+      "level": 2,
+      "description": "In-memory data stores, caching strategies, pub/sub, and session management.",
+      "prerequisites": ["sql"]
+    },
+    "mongodb": {
+      "id": "mongodb",
+      "name": "MongoDB",
+      "category": "data",
+      "level": 2,
+      "description": "NoSQL database design, document modeling, aggregation pipeline.",
+      "prerequisites": ["sql"]
+    },
+    "tensorflow": {
+      "id": "tensorflow",
+      "name": "TensorFlow / Keras",
+      "category": "ai",
+      "level": 3,
+      "description": "Building and training neural networks with TensorFlow and Keras APIs.",
+      "prerequisites": ["deep_learning"]
+    },
+    "pytorch": {
+      "id": "pytorch",
+      "name": "PyTorch",
+      "category": "ai",
+      "level": 3,
+      "description": "Dynamic neural networks, autograd, model training with PyTorch.",
+      "prerequisites": ["deep_learning"]
+    },
+    "transformers": {
+      "id": "transformers",
+      "name": "Transformers & LLMs",
+      "category": "ai",
+      "level": 3,
+      "description": "Attention mechanisms, transformer architectures, fine-tuning large language models.",
+      "prerequisites": ["nlp", "pytorch"]
+    },
+    "rag": {
+      "id": "rag",
+      "name": "RAG Systems",
+      "category": "ai",
+      "level": 3,
+      "description": "Retrieval-Augmented Generation, vector databases, embedding pipelines.",
+      "prerequisites": ["transformers"]
+    },
+    "nextjs": {
+      "id": "nextjs",
+      "name": "Next.js",
+      "category": "frontend",
+      "level": 3,
+      "description": "Full-stack React framework with SSR, SSG, API routes, and app router.",
+      "prerequisites": ["react", "typescript"]
+    },
+    "testing": {
+      "id": "testing",
+      "name": "Testing & QA",
+      "category": "devops",
+      "level": 2,
+      "description": "Unit testing, integration testing, TDD, and testing frameworks.",
+      "prerequisites": ["python"]
+    },
+    "data_engineering": {
+      "id": "data_engineering",
+      "name": "Data Engineering",
+      "category": "data",
+      "level": 3,
+      "description": "ETL pipelines, data warehousing, Apache Spark, and streaming.",
+      "prerequisites": ["sql", "python", "cloud_aws"]
+    },
+    "prompt_engineering": {
+      "id": "prompt_engineering",
+      "name": "Prompt Engineering",
+      "category": "ai",
+      "level": 2,
+      "description": "Designing effective prompts, chain-of-thought, few-shot learning techniques.",
+      "prerequisites": ["python"]
+    },
+    "langchain": {
+      "id": "langchain",
+      "name": "LangChain",
+      "category": "ai",
+      "level": 3,
+      "description": "Building LLM applications with chains, agents, memory, and tool integration.",
+      "prerequisites": ["prompt_engineering", "python"]
+    },
+    "security": {
+      "id": "security",
+      "name": "Web Security",
+      "category": "backend",
+      "level": 2,
+      "description": "Authentication, authorization, OWASP, encryption, and secure coding.",
+      "prerequisites": ["fastapi"]
+    },
+    "agile": {
+      "id": "agile",
+      "name": "Agile & Scrum",
+      "category": "soft_skills",
+      "level": 1,
+      "description": "Agile methodologies, sprint planning, retrospectives, and team collaboration.",
+      "prerequisites": []
+    },
+    "communication": {
+      "id": "communication",
+      "name": "Technical Communication",
+      "category": "soft_skills",
+      "level": 1,
+      "description": "Technical writing, documentation, presentations, and stakeholder communication.",
+      "prerequisites": []
+    }
+  },
+  "categories": {
+    "programming": { "name": "Programming", "color": "#6366f1", "icon": "code" },
+    "data": { "name": "Data & Analytics", "color": "#06b6d4", "icon": "database" },
+    "math": { "name": "Mathematics", "color": "#f59e0b", "icon": "calculator" },
+    "ai": { "name": "AI & Machine Learning", "color": "#8b5cf6", "icon": "brain" },
+    "frontend": { "name": "Frontend Development", "color": "#ec4899", "icon": "layout" },
+    "backend": { "name": "Backend Development", "color": "#10b981", "icon": "server" },
+    "devops": { "name": "DevOps & Cloud", "color": "#f97316", "icon": "cloud" },
+    "soft_skills": { "name": "Soft Skills", "color": "#64748b", "icon": "users" }
+  }
+}
